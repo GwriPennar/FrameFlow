@@ -18,7 +18,7 @@ Initial explorations utilized TensorFlow/Keras frameworks.
 Training a multi-layer CNN proved computationally intensive.
 Implemented GPU acceleration for improved computational efficiency.
 Discovered EfficientNetB0 with custom layers to be highly efficient for training and development.
-Compared ResNet and EfficientNetB0 on the full dataset; EfficientNetB0 exhibited superior performance.
+Compared ResNet and EfficientNetB0 on the full dataset; EfficientNetB0 exhibited faster training at similar performance.
 Employed Bayesian optimization and grid search to identify the optimal learning rate.
 
 **Model Architecture:** Describe the model architecture you’ve used
