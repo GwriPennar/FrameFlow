@@ -85,4 +85,4 @@ Overall, the results demonstrate the effectiveness of the FrameFlow approach in 
 ![Accuracy over Epochs](Final_Accuracy.png)
 
 ## OTHER MODELS
-Initially, I explored using a ResNet model on a subset of the UCF101 dataset, following a TensorFlow documented example. However, I found this approach to be computationally challenging and underperforming on my local machine.
+Initially, I explored using a ResNet model on a subset of the UCF101 dataset, following a TensorFlow documented example. The model performed very well utilising a GPU but took significantly longer to train and requires more investigation.
