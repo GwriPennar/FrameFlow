@@ -69,6 +69,18 @@ In terms of architecture, EfficientNetB0 includes multiple stages with MBConv bl
 
 ## Performance
 
+The model was trained on a full dataset comprising 7,992 records in the training set, 2,664 in the validation set, and 2,664 in the testing set. This approach ensured that the model was trained on diverse samples, had its hyperparameters fine-tuned on a separate validation set, and was finally evaluated on unseen data, thereby establishing its real-world applicability and performance accuracy.
+
+After rigorous training and hyperparameter optimization, including Bayesian optimization and grid search, the optimal learning rate was determined to be 0.0015. This rate facilitated a significant improvement in the model's accuracy and a decrease in validation loss over the training epochs.
+
+The model's performance, measured over epochs on the test set, showed consistent accuracy, with test set accuracy remaining steady at around 90%. Notably, early stopping with a patience of 2 was utilized to halt training once the validation loss ceased to improve, preventing overfitting and ensuring the model's generalization capabilities.
+
+During the model's training, the batch size played a critical role in managing computational resources effectively. After experimentation, a batch size of 2 was chosen. This smaller batch size proved to be less memory-intensive, allowing for a smoother training process without overwhelming the available computational resources. While larger batch sizes can sometimes lead to faster training times due to parallel processing gains, they also require more memory and can introduce challenges with model convergence and generalization.
+
+The choice of a smaller batch size also has implications on the model's learning dynamics. It can lead to a higher level of stochastic noise during gradient descent, which in theory can help the model escape local minima, potentially leading to better general solutions. However, this comes with a trade-off of potentially longer training times and a need for more careful management of learning rates to maintain a stable training process.
+
+Ultimately, the decision to use a batch size of 2 was a strategic one, balancing the need for computational efficiency with the model's ability to effectively learn from the UCF101 dataset. This careful consideration of resource constraints ensured that the model could be trained to a high level of accuracy without incurring excessive computational costs.
+
 ![F1 Scores](Final_F1_Scores.png)
 
 The custom video classification model's capabilities were thoroughly assessed on the UCF101 dataset test set, yielding an outstanding average F1 score of approximately 0.926. This metric, which harmonizes precision and recall, serves as a robust indicator of the model's ability to maintain a balanced classification accuracy across the dataset's diverse range of action categories.
