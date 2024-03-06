@@ -8,6 +8,20 @@ There are other notebooks in this repo which have showcased examples of work on 
 
 FrameFlow is a project that aims to classify videos into different categories based on the actions or events happening in them. It leverages the power of deep learning techniques and pre-trained models to achieve this task efficiently. The final project uses a technique called "transfer learning," where a pre-trained model (a model that has already learned to recognize visual patterns from a large dataset) is fine-tuned on a specific video dataset to adapt it for video classification.
 
+ - The project starts by preparing the video data from the UCF101 dataset. It extracts individual frames from each video and organizes them along with their corresponding labels (the action categories). This process helps the model learn from the visual information in the videos.
+
+- Next, the pre-trained EfficientNetB0 model is loaded, but its weights are initially frozen. This means that the model's existing knowledge of visual features is preserved. Then, additional custom layers are added on top of the pre-trained model to adapt it for video classification.
+
+- During the training process, the model learns to recognize patterns in the video frames and associate them with the correct action categories. It does this by processing each frame through the pre-trained model to extract visual features, and then combining those features across all frames to make a final prediction.
+
+- To ensure the model doesn't overfit (memorize the training data too well), techniques like early stopping and splitting the data into training, validation, and testing sets are employed. Early stopping stops the training process when the model's performance on the validation set stops improving, preventing overfitting.
+
+- After training, the model's performance is evaluated on the testing set, which it has never seen before. This helps assess how well the model can generalize to new, unseen videos.
+
+- Throughout the process, the project employs various techniques to optimize the model's hyperparameters (settings that affect its learning process) and visualize its performance using metrics like accuracy, confusion matrices, and F1 scores.
+
+- The end result is a model that can take a new video as input and accurately classify the action or event happening in it, leveraging the power of pre-trained models and transfer learning to achieve high accuracy without starting from scratch.
+
 ## DATA
 
 The project uses the UCF101 dataset, which is a widely used benchmark for video classification tasks. The dataset consists of 13,320 videos from 101 different action categories, including human actions like "Basketball Shooting," "Bowling," "Horse Riding," and many more. The videos are split into training, validation, and testing sets to train and evaluate the model effectively. More information is on the data sheet on this project and on https://www.crcv.ucf.edu/research/data-sets/ucf101/
