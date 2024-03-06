@@ -2,17 +2,9 @@
 FrameFlow: Video Classification with Pre-trained CNNs
 This project, titled 'FrameFlow', utilizes the power of convolutional neural networks (CNNs) pre-trained on large datasets to perform video classification tasks. The focus of FrameFlow is to apply transfer learning techniques to adapt these sophisticated models to the domain of action recognition in video data.
 
-Overview
-FrameFlow is a video classification project that leverages the EfficientNetB0 pre-trained model and adapts it for action recognition on the UCF101 dataset. The key components of this project include:
+## NON-TECHNICAL EXPLANATION OF THE PROJECT
 
-Dataset Preparation: Organize and prepare video data, extracting frames and corresponding labels.
-Model Selection: Employ the EfficientNetB0 model, a pre-trained model known for its efficiency and accuracy.
-Transfer Learning: Fine-tune the pre-trained model on a subset of the UCF101 dataset, targeting action recognition.
-Evaluation: Assess model performance using metrics such as accuracy, F1 score, and a confusion matrix.
-
-## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
-
-FrameFlow is a project that aims to classify videos into different categories based on the actions or events happening in them. It leverages the power of deep learning techniques and pre-trained models to achieve this task efficiently. The project uses a technique called "transfer learning," where a pre-trained model (a model that has already learned to recognize visual patterns from a large dataset) is fine-tuned on a specific video dataset to adapt it for video classification.
+FrameFlow is a project that aims to classify videos into different categories based on the actions or events happening in them. It leverages the power of deep learning techniques and pre-trained models to achieve this task efficiently. The final project uses a technique called "transfer learning," where a pre-trained model (a model that has already learned to recognize visual patterns from a large dataset) is fine-tuned on a specific video dataset to adapt it for video classification.
 
 ## DATA
 
@@ -69,12 +61,21 @@ Confusion Matrix:
 
 - The confusion matrix visualizations show the number of correct and incorrect predictions for each class.
 - These matrices help identify classes that the model may have struggled with or performed well on.
+- These appear in full on each of the different notebooks.
+  
+![Final example - Confusion Matrix](final_confusion_matrix_example.png)
 
 Precision and Recall:
 
-- Precision by Class: This chart displays the precision for each class in your dataset. Precision is a measure of how many of the items identified as belonging to a class actually do belong to that class. A high precision score indicates that when the model predicts a class, it is very likely to be correct. You'll want to look for classes with lower precision which might indicate a higher number of false positives for those classes. For example, if your model is predicting that a video contains a specific activity, but it doesn't, that would lower the precision.
+The model demonstrates strong performance across a wide range of activities, as evidenced by high precision, recall, and F1 scores for each class. The metrics indicate the model's ability to accurately identify specific activities while minimizing both false positives and false negatives. Notable observations include:
 
-- Recall by Class: The recall chart shows how many of the actual items of a class were correctly identified. It measures the model's ability to detect all relevant instances in a dataset. A high recall score means the model is good at detecting the class, but it doesn't tell you how many other classes were incorrectly labeled as belonging to the class in question. For classes with lower recall, it means there are more false negatives – instances that belong to a class which the model failed to recognize.
+- High Precision Classes: Several classes, such as "PlayingDhol", "PlayingGuitar", and "RockClimbingIndoor", achieved perfect precision scores (1.0), indicating no false positives for these activities.
+- High Recall Classes: Many activities, including "ApplyEyeMakeup", "Archery", and "PlayingFlute", have perfect recall scores (1.0), suggesting that the model successfully identified all relevant instances of these activities.
+- Outstanding F1 Scores: A number of classes, such as "PlayingDhol", "PlayingGuitar", and "RockClimbingIndoor", achieved perfect F1 scores (1.0), showcasing the model's exceptional balance between precision and recall for these activities.
+- Variability in Performance: Some classes, like "PoleVault" and "RopeClimbing", have lower F1 scores (e.g., 0.7719 and 0.8182 respectively), which may indicate challenges in classifying these specific activities accurately. These cases provide opportunities for further model refinement.
+- Average Metrics: The model's overall performance is robust, with average precision, recall, and F1 scores of 0.934, 0.925, and 0.926 respectively. These averages reflect the model's strong general performance across the board.
+
+The model exhibits strong and consistent performance across a diverse set of activities, with high scores in precision, recall, and F1 metrics for the majority of classes. While the performance is generally high, the variability in scores for certain activities highlights areas for potential improvement. The detailed class-by-class breakdown demonstrates the model's capabilities and areas for further development, providing valuable insights for both current use and future iterations.
 
 Training and Validation Curves:
 
@@ -82,13 +83,6 @@ These curves help identify potential overfitting or underfitting issues and moni
 Overall, the results demonstrate the effectiveness of the FrameFlow approach in leveraging pre-trained models and transfer learning for video classification tasks. The model achieved high accuracy on the test set, and the provided visualizations and metrics offer insights into the model's performance across different classes and during the training process.
 
 ![Accuracy over Epochs](Final_Accuracy.png)
-
-Additionally, the project provides visualizations and metrics to evaluate the model's performance in-depth, including:
-
-Confusion Matrix: A visual representation of the model's performance, showing the number of correct and incorrect predictions for each class.
-F1 Scores: A metric that combines precision and recall, providing insights into the model's performance for each class.
-Training and Validation Curves: Plots displaying the model's loss and accuracy during the training process, helping identify potential overfitting or underfitting issues.
-These results demonstrate the effectiveness of the FrameFlow approach in leveraging pre-trained models and transfer learning for video classification tasks.
 
 ## OTHER MODELS
 Initially, I explored using a ResNet model on a subset of the UCF101 dataset, following a TensorFlow documented example. However, I found this approach to be computationally challenging and underperforming on my local machine.
