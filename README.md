@@ -1,6 +1,8 @@
 # Project Title: FrameFlow
 FrameFlow: Video Classification with Pre-trained CNNs
 This project, titled 'FrameFlow', utilizes the power of convolutional neural networks (CNNs) pre-trained on large datasets to perform video classification tasks. The focus of FrameFlow is to apply transfer learning techniques to adapt these sophisticated models to the domain of action recognition in video data.
+The final technical analysis and running of this project was focused on this [notebook](https://github.com/GwriPennar/FrameFlow/blob/main/Final%20FrameFlow%20EfficentNetB0%20UCF_101%20Full%20Dataset%20v1-31%20GPU%20RUN%2050%20EPOCH.ipynb)
+There are other notebooks in this repo which have showcased examples of work on subset data and other models for comparison.
 
 ## NON-TECHNICAL EXPLANATION OF THE PROJECT
 
