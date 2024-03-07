@@ -75,7 +75,7 @@ Batch Size: This was set to 2 to manage the model's memory usage effectively and
 Training/Validation/Test Scores:
 
 - The model achieved a test accuracy of approximately 92.76% on the UCF101 dataset.
-- The training accuracy reached 97.54%, and the validation accuracy was 92.04% after 50 epochs.
+- The training accuracy reached 97.54%, and the validation accuracy was 92.04% wwith early stopping implemented.
 
 F1 Scores:
 - The project provides visualizations of the F1 scores for each class.
