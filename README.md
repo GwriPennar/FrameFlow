@@ -10,7 +10,6 @@ At the heart of this deep learning approach, Convolutional Neural Networks (CNNs
 
 The overarching aim is not only to validate the feasibility of advanced video analysis techniques within the realm of sports but also to lay the groundwork for their wider application. By revolutionising the way sports organisations utilise their video archives, the project envisions enabling real-time game analysis, elevating training programmes, and ushering in a new era of data-driven decision-making in the sports industry.
 
-The focus of FrameFlow is to apply transfer learning techniques to adapt these sophisticated models to the domain of action recognition in video data.
 The final technical analysis and running of this project is focused on this [notebook](https://github.com/GwriPennar/FrameFlow/blob/main/Final%20FrameFlow%20EfficentNetB0%20UCF_101%20Full%20Dataset%20v1-31%20GPU%20RUN%2050%20EPOCH.ipynb)
 There are other notebooks in this repo which have showcased examples of work on subset data and other models for comparison aiding the development process.
 
