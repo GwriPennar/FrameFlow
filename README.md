@@ -1,8 +1,18 @@
 # Project Title: FrameFlow
-FrameFlow: Video Classification with Pre-trained CNNs
-This project, titled 'FrameFlow', utilizes the power of convolutional neural networks (CNNs) pre-trained on large datasets to perform video classification tasks. The focus of FrameFlow is to apply transfer learning techniques to adapt these sophisticated models to the domain of action recognition in video data.
-The final technical analysis and running of this project was focused on this [notebook](https://github.com/GwriPennar/FrameFlow/blob/main/Final%20FrameFlow%20EfficentNetB0%20UCF_101%20Full%20Dataset%20v1-31%20GPU%20RUN%2050%20EPOCH.ipynb)
-There are other notebooks in this repo which have showcased examples of work on subset data and other models for comparison.
+
+In the landscape of sports analytics within the UK, numerous organisations are sitting on vast but largely untapped reserves of game footage and athlete training videos. This wealth of video data, ripe with potential insights into player performances, strategies, and training efficacy, remains underexploited, primarily due to its unorganised and unclassified state.
+
+Acknowledging the hidden opportunities within this seemingly chaotic mass of data, the initiative is set to leverage the capabilities of Machine Learning (ML) and Artificial Intelligence (AI) to navigate through and make sense of this extensive video repository. The ambition is to unlock valuable insights that have remained inaccessible due to the challenges posed by sparse metadata, the variable quality and angles of footage, and the significant computational resources required for effective analysis.
+
+To illustrate the practicality of deploying deep learning techniques for sports video classification, this project will employ the UCF101 dataset as an initial step towards demonstrating feasibility. The UCF101 dataset, renowned for its comprehensive compilation of videos capturing a wide array of human activities, provides an excellent testbed for developing and honing video classification models. By tailoring these models to meet the specific demands of sports analytics, the project aspires to develop a scalable and efficient system capable of deriving actionable insights with minimal manual oversight.
+
+At the heart of this deep learning approach, Convolutional Neural Networks (CNNs) stand out as the preferred initial choice, given their proven efficacy in handling video and image data. This technical preference, however, is presented in a non-technical manner to ensure accessibility and comprehensibility for all stakeholders.
+
+The overarching aim is not only to validate the feasibility of advanced video analysis techniques within the realm of sports but also to lay the groundwork for their wider application. By revolutionising the way sports organisations utilise their video archives, the project envisions enabling real-time game analysis, elevating training programmes, and ushering in a new era of data-driven decision-making in the sports industry.
+
+The focus of FrameFlow is to apply transfer learning techniques to adapt these sophisticated models to the domain of action recognition in video data.
+The final technical analysis and running of this project is focused on this [notebook](https://github.com/GwriPennar/FrameFlow/blob/main/Final%20FrameFlow%20EfficentNetB0%20UCF_101%20Full%20Dataset%20v1-31%20GPU%20RUN%2050%20EPOCH.ipynb)
+There are other notebooks in this repo which have showcased examples of work on subset data and other models for comparison aiding the development process.
 
 ## NON-TECHNICAL EXPLANATION OF THE PROJECT
 
